@@ -7,3 +7,8 @@ def count_chars(text):
   for char in text.lower():
     chars[char] = chars.get(char, 0) + 1
   return chars
+
+
+def rank_chars(chars):
+  sorted_chars = sorted(chars.items(), key=lambda item: item[1], reverse=True)
+  return dict(sorted_chars)
